@@ -1,0 +1,127 @@
+<section class="product-category">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title text-center">
+          <h2>{{ section.settings.section-title }}</h2>
+          <p>{{ section.settings.section-subtitle }}</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="category-box">
+          <a href="{{ section.settings.top_left_url }}">
+            <img src="{{ section.settings.top_left_img | img_url:'1920x'}}" alt="">
+            <div class="content">
+              <h3>{{ section.settings.top_left_title }}</h3>
+              <p>{{ section.settings.top_left_sub }}</p>
+            </div>
+          </a>
+        </div>
+        <div class="category-box">
+          <a href="{{ section.settings.bottom_left_url }}">
+            <img src="{{ section.settings.bottom_left_img | img_url:'1920x'}}" alt="">
+            <div class="content">
+              <h3>{{ section.settings.bottom_left_title }}</h3>
+              <p>{{ section.settings.bottom_left_sub }}</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="category-box category-box-2">
+          <a href="{{ section.settings.right_url }}">
+            <img src="{{ section.settings.right_img | img_url:'1920x'}}" alt="">
+            <div class="content">
+              <h3>{{ section.settings.right_title }}</h3>
+              <p>{{ section.settings.right_sub }}</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+{% schema %}
+{
+  "name" : "product categories",
+  "settings" : [
+    {
+        "type": "text",
+        "id": "section-title",
+        "label": "section title"
+    },
+    {
+        "type": "text",
+        "id": "section-subtitle",
+        "label": "section subtitle"
+    },
+    {
+      "type" : "text",
+      "id" : "top_left_title",
+      "label": "top left title"
+    },
+    {
+      "type" : "text",
+      "id" : "top_left_sub",
+      "label": "top left subtitle"
+    },
+    {
+      "type" : "image_picker",
+      "id" : "top_left_img",
+      "label" : "top left image"
+    },
+    {
+      "type" : "url",
+      "id" : "top_left_url",
+      "label" : "top left link"
+    },
+    {
+      "type" : "text",
+      "id" : "bottom_left_title",
+      "label": "bottom left title"
+    },
+    {
+      "type" : "text",
+      "id" : "bottom_left_sub",
+      "label": "bottom left sub"
+    },
+    {
+      "type" : "image_picker",
+      "id" : "bottom_left_img",
+      "label" : "bottom left image"
+    },
+    {
+      "type" : "url",
+      "id" : "bottom_left_url",
+      "label" : "bottom left link"
+    },
+    {
+      "type" : "text",
+      "id" : "right_title",
+      "label": "right title"
+    },
+    {
+      "type" : "text",
+      "id" : "right_sub",
+      "label": "right subtitle"
+    },
+    {
+      "type" : "image_picker",
+      "id" : "right_img",
+      "label" : "right image"
+    },
+    {
+      "type" : "url",
+      "id" : "right_url",
+      "label" : "right link"
+    }
+
+  ]
+}
+
+{% endschema %}
